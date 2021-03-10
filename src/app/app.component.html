@@ -1,0 +1,32 @@
+<!-- <app-login></app-login>
+<br>
+<app-list></app-list> -->
+<h1>Press Router</h1>
+<ul>
+  <li><a routerLink="admin/login">Go to login admin page</a></li>
+  <br />
+  <li><a routerLink="users/login">Go to login user page</a></li>
+</ul>
+<h1>Lazy Loading Component</h1>
+<ul>
+  <li><button (click)="LoadAdminList()">LoadAdminList</button></li>
+  <br />
+  <li><button (click)="LoadUsersList()">LoadUsersList</button></li>
+</ul>
+<router-outlet></router-outlet>
+<strong>Form Login Angular 10</strong>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <input
+    type="text"
+    name="username"
+    placeholder="Enter Your Username"
+    ngModel
+  />
+  <input
+    type="text"
+    name="password"
+    placeholder="Enter Your Password"
+    ngModel
+  />
+  <button type="submit">Save</button>
+</form>
