@@ -1,1 +1,27 @@
-<strong>Login In User</strong>
+<div style="text-align: center; padding-top: 50px">
+  <strong>Login In User</strong>
+  <br /><br />
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <input
+      type="text"
+      name="username"
+      placeholder="Enter Your Username"
+      ngModel
+    />
+    <input
+      type="text"
+      name="password"
+      placeholder="Enter Your Password"
+      ngModel
+    />
+    <button type="submit">Save</button>
+  </form>
+  <br /><br />
+  <button (click)="CallState()">Check Service</button>
+  <!-- <form #ptb2Form="ngForm" (ngSubmit)="onSubmitPTB2(ptb2Form.value)">
+    <input type="number" name="a" placeholder="Enter Number a" valueDefault ngModel />
+    <input type="number" name="b" placeholder="Enter Number b" ngModel />
+    <input type="number" name="c" placeholder="Enter Number c" ngModel />
+    <button type="submit">Calculate</button>
+  </form> -->
+</div>
